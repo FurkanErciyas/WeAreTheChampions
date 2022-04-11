@@ -17,5 +17,6 @@ namespace WeAreTheChampions.Data
         public DbSet<Player> Players { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Color> Colors { get; set; }
+        //public DbSet<TeamColor> TeamColors { get; set; }
     }
 }

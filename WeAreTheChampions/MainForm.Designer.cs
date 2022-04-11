@@ -44,20 +44,28 @@
             this.cms = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblNewEncounter = new System.Windows.Forms.LinkLabel();
+            this.dgvMatches = new System.Windows.Forms.DataGridView();
+            this.tabPage3.SuspendLayout();
             this.tpPlayers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
             this.tpTeams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeams)).BeginInit();
             this.tabControl.SuspendLayout();
             this.cms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.dgvMatches);
+            this.tabPage3.Controls.Add(this.lblNewEncounter);
+            this.tabPage3.Controls.Add(this.label4);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(481, 474);
+            this.tabPage3.Size = new System.Drawing.Size(558, 474);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Matches";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -73,7 +81,7 @@
             this.tpPlayers.Margin = new System.Windows.Forms.Padding(6);
             this.tpPlayers.Name = "tpPlayers";
             this.tpPlayers.Padding = new System.Windows.Forms.Padding(6);
-            this.tpPlayers.Size = new System.Drawing.Size(481, 474);
+            this.tpPlayers.Size = new System.Drawing.Size(558, 474);
             this.tpPlayers.TabIndex = 1;
             this.tpPlayers.Text = "Players";
             this.tpPlayers.UseVisualStyleBackColor = true;
@@ -83,7 +91,7 @@
             this.lblNewPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNewPlayer.AutoSize = true;
             this.lblNewPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNewPlayer.Location = new System.Drawing.Point(379, 52);
+            this.lblNewPlayer.Location = new System.Drawing.Point(456, 52);
             this.lblNewPlayer.Name = "lblNewPlayer";
             this.lblNewPlayer.Size = new System.Drawing.Size(92, 20);
             this.lblNewPlayer.TabIndex = 17;
@@ -135,7 +143,7 @@
             this.dgvPlayers.ReadOnly = true;
             this.dgvPlayers.RowHeadersVisible = false;
             this.dgvPlayers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlayers.Size = new System.Drawing.Size(458, 391);
+            this.dgvPlayers.Size = new System.Drawing.Size(535, 391);
             this.dgvPlayers.TabIndex = 12;
             this.dgvPlayers.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvPlayers_MouseDown);
             // 
@@ -148,7 +156,7 @@
             this.tpTeams.Margin = new System.Windows.Forms.Padding(6);
             this.tpTeams.Name = "tpTeams";
             this.tpTeams.Padding = new System.Windows.Forms.Padding(6);
-            this.tpTeams.Size = new System.Drawing.Size(481, 474);
+            this.tpTeams.Size = new System.Drawing.Size(558, 474);
             this.tpTeams.TabIndex = 0;
             this.tpTeams.Text = "Teams";
             this.tpTeams.UseVisualStyleBackColor = true;
@@ -158,7 +166,7 @@
             this.lblNewTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNewTeam.AutoSize = true;
             this.lblNewTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblNewTeam.Location = new System.Drawing.Point(381, 20);
+            this.lblNewTeam.Location = new System.Drawing.Point(458, 20);
             this.lblNewTeam.Name = "lblNewTeam";
             this.lblNewTeam.Size = new System.Drawing.Size(89, 20);
             this.lblNewTeam.TabIndex = 18;
@@ -180,7 +188,7 @@
             this.dgvTeams.ReadOnly = true;
             this.dgvTeams.RowHeadersVisible = false;
             this.dgvTeams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTeams.Size = new System.Drawing.Size(458, 421);
+            this.dgvTeams.Size = new System.Drawing.Size(535, 421);
             this.dgvTeams.TabIndex = 1;
             this.dgvTeams.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dgvTeams_MouseDown);
             // 
@@ -203,7 +211,7 @@
             this.tabControl.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(489, 511);
+            this.tabControl.Size = new System.Drawing.Size(566, 511);
             this.tabControl.TabIndex = 0;
             // 
             // cms
@@ -220,6 +228,7 @@
             this.tsmiEdit.Name = "tsmiEdit";
             this.tsmiEdit.Size = new System.Drawing.Size(115, 24);
             this.tsmiEdit.Text = "Edit";
+            this.tsmiEdit.Click += new System.EventHandler(this.tsmiEdit_Click);
             // 
             // tsmiDelete
             // 
@@ -229,17 +238,58 @@
             this.tsmiDelete.Text = "Delete";
             this.tsmiDelete.Click += new System.EventHandler(this.tsmiDelete_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Encounters";
+            // 
+            // lblNewEncounter
+            // 
+            this.lblNewEncounter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNewEncounter.AutoSize = true;
+            this.lblNewEncounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblNewEncounter.Location = new System.Drawing.Point(419, 20);
+            this.lblNewEncounter.Name = "lblNewEncounter";
+            this.lblNewEncounter.Size = new System.Drawing.Size(123, 20);
+            this.lblNewEncounter.TabIndex = 1;
+            this.lblNewEncounter.TabStop = true;
+            this.lblNewEncounter.Text = "+NewEncounter";
+            this.lblNewEncounter.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblNewEncounter_LinkClicked);
+            // 
+            // dgvMatches
+            // 
+            this.dgvMatches.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMatches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMatches.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMatches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMatches.Location = new System.Drawing.Point(12, 44);
+            this.dgvMatches.MultiSelect = false;
+            this.dgvMatches.Name = "dgvMatches";
+            this.dgvMatches.ReadOnly = true;
+            this.dgvMatches.RowHeadersVisible = false;
+            this.dgvMatches.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMatches.Size = new System.Drawing.Size(530, 422);
+            this.dgvMatches.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 511);
+            this.ClientSize = new System.Drawing.Size(566, 511);
             this.Controls.Add(this.tabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "We Are The Champions V1.0";
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tpPlayers.ResumeLayout(false);
             this.tpPlayers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).EndInit();
@@ -248,6 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeams)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.cms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,5 +320,8 @@
         private System.Windows.Forms.ContextMenuStrip cms;
         private System.Windows.Forms.ToolStripMenuItem tsmiEdit;
         private System.Windows.Forms.ToolStripMenuItem tsmiDelete;
+        private System.Windows.Forms.LinkLabel lblNewEncounter;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvMatches;
     }
 }

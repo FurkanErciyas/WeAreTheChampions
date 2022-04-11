@@ -117,20 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="AddMatchForm_Stadium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddMatchForm_Stadium.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="AddPlayerForm_Messi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddPlayerForm.Messi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddPlayerForm_Ronaldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddPlayerForm_Ronaldo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddPlayerForm_Stadium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddPlayerForm.Stadium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddTeamForm_BackGroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddTeamForm_BackGroundImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

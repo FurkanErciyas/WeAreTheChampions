@@ -63,6 +63,16 @@ namespace WeAreTheChampions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddMatchForm_Stadium {
+            get {
+                object obj = ResourceManager.GetObject("AddMatchForm_Stadium", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AddPlayerForm_Messi {
             get {
                 object obj = ResourceManager.GetObject("AddPlayerForm_Messi", resourceCulture);

@@ -19,6 +19,12 @@ namespace WeAreTheChampions
             InitializeComponent();
             LoadingTeams();
             LoadingPlayers();
+            LoadingMatches();
+        }
+
+        private void LoadingMatches()
+        {
+            dgvMatches.DataSource = db.Matches.ToList();
         }
 
         private void LoadingPlayers()
@@ -38,7 +44,6 @@ namespace WeAreTheChampions
                 cboTeams.Items.Add(team);
             }
             cboTeams.SelectedIndex = 0;
-            //cboTeams.DataSource = db.Teams.ToList();
         }
 
         private void lblNewTeam_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -71,7 +76,6 @@ namespace WeAreTheChampions
                 Team selectedTeam = (Team)cboTeams.SelectedItem;
                 dgvPlayers.DataSource = selectedTeam.Players.ToList();
             }
-
         }
 
         private void tsmiDelete_Click(object sender, EventArgs e)
@@ -110,6 +114,31 @@ namespace WeAreTheChampions
             {
                 cms.Show((DataGridView)sender, new Point(e.X, e.Y));
             }
+        }
+
+        private void tsmiEdit_Click(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == tpTeams)
+            {
+                Team selectedTeam = (Team)dgvTeams.SelectedRows[0].DataBoundItem;
+                AddTeamForm addTeamForm = new AddTeamForm(db, selectedTeam);
+                addTeamForm.ShowDialog();
+            }
+            else if (tabControl.SelectedTab == tpPlayers)
+            {
+
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void lblNewEncounter_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddMatchForm addMatchForm = new AddMatchForm(db);
+            addMatchForm.ShowDialog();
+            LoadingMatches();
         }
     }
 }
